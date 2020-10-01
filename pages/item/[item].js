@@ -12,8 +12,11 @@ export default function Item() {
   const router = useRouter();
   const classes = useStyles();
   const { item } = router.query;
+  if (!item) {
+    return null;
+  }
   const currentItem = items.find(
-    (i) => i.name.toLowerCase() === item.toLowerCase()
+    (i) => i.name && i.name.toLowerCase() === item.toLowerCase()
   );
   if (!currentItem) {
     return <div>404</div>;
@@ -22,7 +25,9 @@ export default function Item() {
     currentItem.prerequisits &&
     !!currentItem.prerequisits.length &&
     items.filter(
-      (i) => currentItem.prerequisits.indexOf(i.name.toLowerCase()) !== -1
+      (i) =>
+        !!i.name &&
+        currentItem.prerequisits.indexOf(i.name.toLowerCase()) !== -1
     );
   return (
     <div>
@@ -60,6 +65,15 @@ export default function Item() {
               color="textSecondary"
               paragraph
             >
+              {currentItem.subTitle}
+            </Typography>
+            <Typography
+              style={{ maxWidth: 300, margin: "0 auto" }}
+              variant="p"
+              align="center"
+              color="textSecondary"
+              paragraph
+            >
               {currentItem.description}
             </Typography>
           </Container>
@@ -85,33 +99,46 @@ export default function Item() {
                 })}
               </Typography>
             )}
-            <Typography
-              component="h3"
-              variant="h4"
-              align="left"
-              color="textPrimary"
-              gutterBottom
-            >
-              Basics:
-            </Typography>
-            <Typography
-              component="h3"
-              variant="h4"
-              align="left"
-              color="textPrimary"
-              gutterBottom
-            >
-              Mid-way (intermediate):
-            </Typography>
-            <Typography
-              component="h3"
-              variant="h4"
-              align="left"
-              color="textPrimary"
-              gutterBottom
-            >
-              Advanced:
-            </Typography>
+          </Container>
+          <Container maxWidth="lg">
+            {currentItem.parts.map((i) => (
+              <>
+                <Typography
+                  component="h5"
+                  variant="h5"
+                  align="left"
+                  color="textPrimary"
+                  gutterBottom
+                >
+                  {i.title}
+                </Typography>
+                <Typography
+                  style={{ maxWidth: 300 }}
+                  variant="p"
+                  align="left"
+                  color="textSecondary"
+                  paragraph
+                >
+                  {i.description}
+                </Typography>
+                <div
+                  style={{ width: "100%" }}
+                  dangerouslySetInnerHTML={{ __html: i.embed }}
+                />
+                <Typography
+                  style={{ maxWidth: 300 }}
+                  variant="p"
+                  align="left"
+                  color="textSecondary"
+                  paragraph
+                >
+                  {i.bottomText}
+                </Typography>
+                <br />
+                <br />
+                <br />
+              </>
+            ))}
           </Container>
         </div>
         <Container>
