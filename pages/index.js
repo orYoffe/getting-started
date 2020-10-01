@@ -79,7 +79,7 @@ export default function Album() {
           <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={4}>
               {items.map((card) => {
-                const link = `${process.env.BACKEND_URL}/item/${card.name}`;
+                const link = `${process.env.BACKEND_URL}/${card.name}`;
                 return (
                   <Grid item key={card.name} xs={12} sm={6} md={4}>
                     <Link href={link} as={link}>

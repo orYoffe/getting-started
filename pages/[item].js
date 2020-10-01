@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useStyles } from "../../util/styles";
-import { items } from "../../util/items";
-import Header from "../../components/Header";
+import { useStyles } from "../util/styles";
+import { items } from "../util/items";
+import Header from "../components/Header";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import MUILink from "@material-ui/core/Link";
