@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { useStyles } from "../util/styles";
 import { items } from "../util/items";
 import Header from "../components/Header";
@@ -8,16 +7,8 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import MUILink from "@material-ui/core/Link";
 
-export default function Item() {
-  const router = useRouter();
+export default function Item({ currentItem }) {
   const classes = useStyles();
-  const { item } = router.query;
-  if (!item) {
-    return null;
-  }
-  const currentItem = items.find(
-    (i) => i.name && i.name.toLowerCase() === item.toLowerCase()
-  );
   if (!currentItem) {
     return <div>404</div>;
   }
@@ -150,4 +141,24 @@ export default function Item() {
       </main>
     </div>
   );
+}
+
+export const getStaticProps = async ({ params }) => {
+  const { item } = params;
+  const currentItem =
+    item &&
+    items.find((i) => i.name && i.name.toLowerCase() === item.toLowerCase());
+  console.log("------------currentItem------------", currentItem);
+  return {
+    props: {
+      currentItem,
+    },
+  };
+};
+
+export async function getStaticPaths() {
+  return {
+    paths: items.map((i) => ({ params: { item: i.name } })),
+    fallback: false, // See the "fallback" section below
+  };
 }
