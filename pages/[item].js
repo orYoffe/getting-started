@@ -92,44 +92,45 @@ export default function Item({ currentItem }) {
             )}
           </Container>
           <Container maxWidth="lg">
-            {currentItem.parts.map((i) => (
-              <>
-                <Typography
-                  component="h5"
-                  variant="h5"
-                  align="left"
-                  color="textPrimary"
-                  gutterBottom
-                >
-                  {i.title}
-                </Typography>
-                <Typography
-                  style={{ maxWidth: 300 }}
-                  variant="p"
-                  align="left"
-                  color="textSecondary"
-                  paragraph
-                >
-                  {i.description}
-                </Typography>
-                <div
-                  style={{ width: "100%" }}
-                  dangerouslySetInnerHTML={{ __html: i.embed }}
-                />
-                <Typography
-                  style={{ maxWidth: 300 }}
-                  variant="p"
-                  align="left"
-                  color="textSecondary"
-                  paragraph
-                >
-                  {i.bottomText}
-                </Typography>
-                <br />
-                <br />
-                <br />
-              </>
-            ))}
+            {currentItem.parts &&
+              currentItem.parts.map((i) => (
+                <>
+                  <Typography
+                    component="h5"
+                    variant="h5"
+                    align="left"
+                    color="textPrimary"
+                    gutterBottom
+                  >
+                    {i.title}
+                  </Typography>
+                  <Typography
+                    style={{ maxWidth: 300 }}
+                    variant="p"
+                    align="left"
+                    color="textSecondary"
+                    paragraph
+                  >
+                    {i.description}
+                  </Typography>
+                  <div
+                    style={{ width: "100%" }}
+                    dangerouslySetInnerHTML={{ __html: i.embed }}
+                  />
+                  <Typography
+                    style={{ maxWidth: 300 }}
+                    variant="p"
+                    align="left"
+                    color="textSecondary"
+                    paragraph
+                  >
+                    {i.bottomText}
+                  </Typography>
+                  <br />
+                  <br />
+                  <br />
+                </>
+              ))}
           </Container>
         </div>
         <Container>
