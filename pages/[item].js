@@ -133,7 +133,7 @@ export default function Item({ currentItem }) {
               ))}
           </Container>
         </div>
-        <Container>
+        <Container maxWidth="md">
           Back{" "}
           <Link href="/" as={process.env.BACKEND_URL + "/"}>
             <a>Home</a>
