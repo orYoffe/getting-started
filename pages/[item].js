@@ -149,7 +149,6 @@ export const getStaticProps = async ({ params }) => {
   const currentItem =
     item &&
     items.find((i) => i.name && i.name.toLowerCase() === item.toLowerCase());
-  console.log("------------currentItem------------", currentItem);
   return {
     props: {
       currentItem,

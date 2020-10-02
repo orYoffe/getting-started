@@ -45,9 +45,21 @@ export const items = [
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>`,
-        title: "<img>The Image tag, displaying images.</a>",
+        title: "<img>The Image tag, displaying images.",
         description:
           "An image tag can show an image online or from on you computer.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/inspiring-dew-0vqxj?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="inspiring-dew-0vqxj"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title:
+          'The input tag gets different types of input from the user. <input type="text" />',
+        description:
+          "With the input tag and the select and option tags you can ask the user many different types of questions to get his input.",
       },
     ],
   },

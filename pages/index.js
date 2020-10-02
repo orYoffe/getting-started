@@ -98,7 +98,7 @@ export default function Album() {
                             >
                               {card.name}
                             </Typography>
-                            <Typography>{card.description}</Typography>
+                            <Typography>{card.subTitle}</Typography>
                           </CardContent>
                           <CardActions>
                             <Button size="small" color="primary">
