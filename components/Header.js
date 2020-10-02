@@ -27,10 +27,25 @@ export default function Header() {
         <link rel="icon" href={icon} type="image/png" />
       </Head>
       <CssBaseline />
-      <AppBar position="relative">
+      <AppBar
+        position="relative"
+        style={{ backgroundColor: "#fff", marginBottom: 20 }}
+      >
         <Toolbar>
           <img alt="Getting started icon" src={icon} className="img" />
-          <Typography variant="h6" color="inherit" noWrap>
+          <style jsx>{`
+            .img {
+              display: inline-block;
+              width: 50px;
+              margin-right: 10px;
+            }
+          `}</style>
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            style={{ color: "#222" }}
+          >
             <Link href="/" as={process.env.BACKEND_URL + "/"}>
               <MUILink color="inherit" href={process.env.BACKEND_URL + "/"}>
                 Getting Started
