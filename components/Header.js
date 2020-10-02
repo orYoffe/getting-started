@@ -10,6 +10,7 @@ import MUILink from "@material-ui/core/Link";
 
 export default function Header() {
   const classes = useStyles();
+  const icon = `${process.env.BACKEND_URL}/icon.png`;
 
   return (
     <>
@@ -20,14 +21,15 @@ export default function Header() {
             rest you can just search with google."
         ></meta>
         <meta name="theme-color" content="#000000" />
-        <meta property="og:image" content="/icon.png" />
-        <link rel="apple-touch-icon" href="/icon.png" />
-        <link rel="icon" href="/icon.png" type="image/png" />
+        <meta property="og:image" content={icon} />
+        <link rel="apple-touch-icon" href={icon} />
+
+        <link rel="icon" href={icon} type="image/png" />
       </Head>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CodeIcon className={classes.icon} style={{}} />
+          <img alt="Getting started icon" src={icon} className="img" />
           <Typography variant="h6" color="inherit" noWrap>
             <Link href="/" as={process.env.BACKEND_URL + "/"}>
               <MUILink color="inherit" href={process.env.BACKEND_URL + "/"}>
