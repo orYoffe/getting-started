@@ -51,7 +51,12 @@ Connecting to html
     console.log
 Types
     Variables
+conditions
 Functions
+loops
+    for
+    while
+    array functions
 Manipulating html
 Events
 Async promise

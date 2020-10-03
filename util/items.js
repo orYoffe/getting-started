@@ -22,7 +22,7 @@ export const items = [
           "An html tag is made out of it's openning tag, closing tag, it's content in the middle and it's attributes and values on it's opening tag.\n There are tags the don't have closing tags like the <br/> and <img/> tags.",
       },
       {
-        embed: `<iframe src="https://codesandbox.io/embed/white-cloud-zyegl?autoresize=1&codemirror=1&fontsize=15&hidenavigation=1&theme=dark"
+        embed: `<iframe src="https://codesandbox.io/embed/white-cloud-zyegl?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="white-cloud-zyegl"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
@@ -35,7 +35,7 @@ export const items = [
           'You can create your own html files like this "index.html" or "any-name_you_want.html" and open it in your browser just by double clicking on it.',
       },
       {
-        embed: `<iframe src="https://codesandbox.io/embed/mystifying-montalcini-srutx?autoresize=1&codemirror=1&eslint=1&fontsize=14&hidenavigation=1&theme=dark"
+        embed: `<iframe src="https://codesandbox.io/embed/mystifying-montalcini-srutx?autoresize=1&eslint=1&fontsize=16&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="mystifying-montalcini-srutx"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
@@ -46,7 +46,7 @@ export const items = [
           "An achor tag can redirect the user to any page online or other files on you machine.",
       },
       {
-        embed: `<iframe src="https://codesandbox.io/embed/gifted-ride-xvrby?autoresize=1&codemirror=1&fontsize=15&theme=dark"
+        embed: `<iframe src="https://codesandbox.io/embed/gifted-ride-xvrby?autoresize=1&fontsize=16&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="gifted-ride-xvrby"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
@@ -96,14 +96,48 @@ export const items = [
           "To insert JavaScript code in an HTML page we use the <script> tag.\nThe two options are to write the JavaScript code inside the tag or link to a JavaScript file with a url.",
       },
       {
-        embed: `<iframe src="https://codesandbox.io/embed/inspiring-dew-0vqxj?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+        embed: `<iframe src="https://codesandbox.io/embed/fervent-cdn-2e0rt?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="inspiring-dew-0vqxj"
+     title="fervent-cdn-2e0rt"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>`,
-        title: "JavaScript types",
-        description: "",
+        title: "Types and Variables",
+        description:
+          "JavaScript variables are used to save some value or data to reuse it later. Declaring and using a variable is easy since you don't need to specify the type.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/competent-wildflower-j362q?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="competent-wildflower-j362q"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Conditions",
+        description:
+          "Making conditions helps to decide what your code will do next. For these case we use if, else and switch statements.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/practical-sky-94t0g?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="practical-sky-94t0g"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Functions",
+        description:
+          "Functions are blocks of code you can declare to call (execute) later at the right time. They are very useful in order to reuse specific code actions.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/romantic-aryabhata-jf1pi?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="romantic-aryabhata-jf1pi"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Loops",
+        description:
+          "Many times you will find that you want to go over an array list or values of an object. There are many ways to do loops and we'll cover the basic ones here.",
       },
     ],
   },
