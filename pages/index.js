@@ -33,7 +33,7 @@ export default function Album() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>Getting started</title>
       </Head>
@@ -131,7 +131,7 @@ export default function Album() {
         <Copyright />
       </footer> */}
       {/* End footer */}
-    </React.Fragment>
+    </>
   );
 }
 // export default function Home() {

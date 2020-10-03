@@ -79,8 +79,33 @@ export const items = [
   {
     name: "JavaScript",
     subTitle: "The Programming language of the web",
+    description:
+      "JavaScript is mainly run in the browser, but can run on servers and any other place today.",
     img: jsImage,
     prerequisits: ["html", "css"],
+    parts: [
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/purple-http-3cvem?autoresize=1&expanddevtools=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="purple-http-3cvem"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Connecting HTML and JavaScript",
+        description:
+          "To insert JavaScript code in an HTML page we use the <script> tag.\nThe two options are to write the JavaScript code inside the tag or link to a JavaScript file with a url.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/inspiring-dew-0vqxj?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="inspiring-dew-0vqxj"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "JavaScript types",
+        description: "",
+      },
+    ],
   },
   {
     name: "Node.js",

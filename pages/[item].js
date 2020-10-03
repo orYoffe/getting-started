@@ -10,6 +10,7 @@ import MUILink from "@material-ui/core/Link";
 export default function Item({ currentItem, nextItem }) {
   const classes = useStyles();
   if (!currentItem) {
+    return null;
     return <div>404 Item not found</div>;
   }
 
@@ -46,6 +47,9 @@ export default function Item({ currentItem, nextItem }) {
               {currentItem.name}
             </Typography>
             <style jsx>{`
+              main {
+                margin-top: 20px;
+              }
               .img {
                 display: inline-block;
                 width: 50px;
@@ -69,7 +73,7 @@ export default function Item({ currentItem, nextItem }) {
               {currentItem.description}
             </Typography>
           </Container>
-          <Container maxWidth="md">
+          <Container maxWidth="lg" style={{ marginBottom: 20 }}>
             {needToKnow && !!needToKnow.length && (
               <Typography
                 component="h5"
@@ -79,10 +83,10 @@ export default function Item({ currentItem, nextItem }) {
               >
                 Need to know (before learning {currentItem.name}):{" "}
                 {needToKnow.map((i, index) => {
-                  const link = `${process.env.BACKEND_URL}/item/${i.name}`;
+                  const link = `${process.env.BACKEND_URL}/${i.name}`;
                   return (
                     <Link href={link} as={link} key={link}>
-                      <MUILink color="inherit" href={link}>
+                      <MUILink href={link}>
                         {index === 0 ? " " : ", "}
                         {i.name}
                       </MUILink>
@@ -169,6 +173,7 @@ export const getStaticProps = async ({ params }) => {
   const currentItem =
     !!item &&
     items.find((i) => i.name && i.name.toLowerCase() === item.toLowerCase());
+
   const nextItem =
     !!currentItem &&
     !!currentItem.next &&

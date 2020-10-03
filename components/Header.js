@@ -1,15 +1,12 @@
 import Link from "next/link";
 import Head from "next/head";
 import AppBar from "@material-ui/core/AppBar";
-import CodeIcon from "@material-ui/icons/Code";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { useStyles } from "../util/styles";
 import MUILink from "@material-ui/core/Link";
 
 export default function Header() {
-  const classes = useStyles();
   const icon = `${process.env.BACKEND_URL}/icon.png`;
 
   return (
@@ -26,17 +23,18 @@ export default function Header() {
 
         <link rel="icon" href={icon} type="image/png" />
       </Head>
+
+      <style jsx>{`
+        .img {
+          display: inline-block;
+          width: 50px;
+          margin-right: 10px;
+        }
+      `}</style>
       <CssBaseline />
       <AppBar position="relative" style={{ backgroundColor: "#fff" }}>
         <Toolbar>
           <img alt="Getting started icon" src={icon} className="img" />
-          <style jsx>{`
-            .img {
-              display: inline-block;
-              width: 50px;
-              margin-right: 10px;
-            }
-          `}</style>
           <Typography
             variant="h6"
             color="inherit"

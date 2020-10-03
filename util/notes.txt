@@ -20,6 +20,8 @@ Forms, submit, action
 
 Css
 
+Style and link tags and Style attribute
+    Connecting tags from outside and inside
 Rules:
     Background color
     Margin, padding
@@ -35,9 +37,6 @@ Pseudo selctors
     pseudo: hover, active
     Fist child nth child
 
-Style and link
-    Connecting tags from outside and inside
-
 Media queries
     mobile, max and min
 
@@ -47,8 +46,11 @@ Media queries
 
 Js
 
+Connecting to html
+    script tag
+    console.log
 Types
-Variables
+    Variables
 Functions
 Manipulating html
 Events
