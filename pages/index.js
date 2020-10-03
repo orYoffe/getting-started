@@ -35,7 +35,7 @@ export default function Album() {
   return (
     <React.Fragment>
       <Head>
-        <title> Getting started </title>
+        <title>Getting started</title>
       </Head>
       <Header />
       <main>

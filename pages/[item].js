@@ -7,11 +7,12 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import MUILink from "@material-ui/core/Link";
 
-export default function Item({ currentItem }) {
+export default function Item({ currentItem, nextItem }) {
   const classes = useStyles();
   if (!currentItem) {
-    return <div>404</div>;
+    return <div>404 Item not found</div>;
   }
+
   const needToKnow =
     currentItem.prerequisits &&
     !!currentItem.prerequisits.length &&
@@ -21,7 +22,7 @@ export default function Item({ currentItem }) {
         currentItem.prerequisits.indexOf(i.name.toLowerCase()) !== -1
     );
   return (
-    <div>
+    <>
       <Head>
         <title> Getting started with {currentItem.name} </title>
       </Head>
@@ -80,7 +81,7 @@ export default function Item({ currentItem }) {
                 {needToKnow.map((i, index) => {
                   const link = `${process.env.BACKEND_URL}/item/${i.name}`;
                   return (
-                    <Link href={link} as={link} key={i.name}>
+                    <Link href={link} as={link} key={link}>
                       <MUILink color="inherit" href={link}>
                         {index === 0 ? " " : ", "}
                         {i.name}
@@ -94,7 +95,7 @@ export default function Item({ currentItem }) {
           <Container maxWidth="lg">
             {currentItem.parts &&
               currentItem.parts.map((i) => (
-                <>
+                <div key={i.title}>
                   <Typography
                     component="h5"
                     variant="h5"
@@ -113,10 +114,15 @@ export default function Item({ currentItem }) {
                   >
                     {i.description}
                   </Typography>
-                  <div
-                    style={{ width: "100%" }}
-                    dangerouslySetInnerHTML={{ __html: i.embed }}
-                  />
+                  {i.image && (
+                    <img alt={i.title} src={i.image} className="img" />
+                  )}
+                  {i.embed && (
+                    <div
+                      style={{ width: "100%" }}
+                      dangerouslySetInnerHTML={{ __html: i.embed }}
+                    />
+                  )}
                   <Typography
                     style={{ maxWidth: 300 }}
                     variant="p"
@@ -129,29 +135,50 @@ export default function Item({ currentItem }) {
                   <br />
                   <br />
                   <br />
-                </>
+                </div>
               ))}
           </Container>
+          <Container
+            maxWidth="md"
+            style={{
+              justifyContent: "space-between",
+              display: "flex",
+              marginBottom: 20,
+            }}
+          >
+            <Link href="/" as={process.env.BACKEND_URL + "/"}>
+              <a>Back Home</a>
+            </Link>
+            {nextItem && (
+              <Link
+                href={process.env.BACKEND_URL + "/" + nextItem.name}
+                as={process.env.BACKEND_URL + "/" + nextItem.name}
+              >
+                <a>Continue to learn {nextItem.name}</a>
+              </Link>
+            )}
+          </Container>
         </div>
-        <Container maxWidth="md">
-          Back{" "}
-          <Link href="/" as={process.env.BACKEND_URL + "/"}>
-            <a>Home</a>
-          </Link>
-        </Container>
       </main>
-    </div>
+    </>
   );
 }
 
 export const getStaticProps = async ({ params }) => {
   const { item } = params;
   const currentItem =
-    item &&
+    !!item &&
     items.find((i) => i.name && i.name.toLowerCase() === item.toLowerCase());
+  const nextItem =
+    !!currentItem &&
+    !!currentItem.next &&
+    items.find(
+      (i) => i.name && i.name.toLowerCase() === currentItem.next.toLowerCase()
+    );
   return {
     props: {
       currentItem,
+      nextItem,
     },
   };
 };

@@ -13,7 +13,14 @@ export const items = [
     description:
       'HTML is made out of tags. \nTags can hold values with attributes.\n For example: \n<html attribute="attribute value">',
     img: htmlImage,
+    next: "Css",
     parts: [
+      {
+        image: "/anatomy-of-an-html-element.png",
+        title: "HTML tag structure",
+        description:
+          "An html tag is made out of it's openning tag, closing tag, it's content in the middle and it's attributes and values on it's opening tag.\n There are tags the don't have closing tags like the <br/> and <img/> tags.",
+      },
       {
         embed: `<iframe src="https://codesandbox.io/embed/white-cloud-zyegl?autoresize=1&codemirror=1&fontsize=15&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"

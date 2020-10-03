@@ -27,10 +27,7 @@ export default function Header() {
         <link rel="icon" href={icon} type="image/png" />
       </Head>
       <CssBaseline />
-      <AppBar
-        position="relative"
-        style={{ backgroundColor: "#fff", marginBottom: 20 }}
-      >
+      <AppBar position="relative" style={{ backgroundColor: "#fff" }}>
         <Toolbar>
           <img alt="Getting started icon" src={icon} className="img" />
           <style jsx>{`
