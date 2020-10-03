@@ -139,8 +139,34 @@ export const items = [
         description:
           "Many times you will find that you want to go over an array list or values of an object. There are many ways to do loops and we'll cover the basic ones here.",
       },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/silent-firefly-x0hsr?autoresize=1&expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="silent-firefly-x0hsr"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Changing the DOM (the HTML or the page)",
+        description:
+          "To make websites interactive you might want to change the page by adding different styles or showing different data. To do that we fetch the element (html tag) that we want to change and make our changes on it.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/admiring-river-k0nsk?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="admiring-river-k0nsk"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Events in the browser",
+        description:
+          "Every tag on the page has many events that you can listen to and assign a function to be called when that event happens. Some of the basic ones are click (a left click of the mouse on the tag), hover, keydown (when a user clicks a key on the keyboard) and many more events.",
+      },
     ],
   },
+];
+
+// future items
+const futureItems = [
   {
     name: "Node.js",
     subTitle: "JavaScript Server-side",
