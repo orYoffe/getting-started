@@ -28,18 +28,19 @@ Selectors
 Pseudo selctors
     pseudo: hover, active
     First child nth child
-    
+
 Rules:
     Background color
-    Margin, padding
+
+    
     Position
     Display
+
+    Margin, padding
     Flexbox
 
 Media queries
     mobile, max and min
-
-
 
 
 
