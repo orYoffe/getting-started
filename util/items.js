@@ -114,24 +114,59 @@ export const items = [
           "There are some special rules selectors to be more specific about which tags should be changed. depending on the tag state or place in the page.",
       },
       {
-        embed: `<iframe src="https://codesandbox.io/embed/lucid-brahmagupta-g21mu?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+        embed: `<iframe src="https://codesandbox.io/embed/sleepy-hoover-o8vc4?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="lucid-brahmagupta-g21mu"
+     title="sleepy-hoover-o8vc4"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>`,
         title: "CSS rules (declarations)",
-        description: "...",
+        description:
+          "CSS rules are style declarations of how the selected element should appear. There are many but we will focus here on the basic ones.",
       },
       {
-        embed: `<iframe src="https://codesandbox.io/embed/lucid-brahmagupta-g21mu?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+        embed: `<iframe src="https://codesandbox.io/embed/crazy-mahavira-lhcog?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="lucid-brahmagupta-g21mu"
+     title="crazy-mahavira-lhcog"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "CSS rules positioning: display and position",
+        description:
+          "Many time you will find yourself in need of change the behaviour of elements with others in the page. For those cases knowing the display and position are really useful.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/fragrant-bush-0qic9?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="fragrant-bush-0qic9"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>>`,
+        title: "CSS rules spacing: margin and padding",
+        description:
+          "To control the spacing between elements on the page we use margin and padding rules. They are similar besided the fact that margin effects the outer part of the element and padding effects the inner part of the element.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/dazzling-bogdan-6wr0m?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="dazzling-bogdan-6wr0m"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "CSS rules fonts: font-family, font-size and more...",
+        description:
+          "Font rules enable you to change how text appears and much more. Some of the basic useful font rules are: font-family, font-size, color, line-height, font-weight and font-style",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/objective-faraday-xp46g?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="objective-faraday-xp46g"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>`,
         title: "Media queries (mobile and different screen sizes)",
-        description: "...",
+        description:
+          "Media queries are blocks of css with a condition to apply when it fits. Mostly used to activate rules per the screen width for mobile, tablet and desktop devices.",
       },
     ],
   },

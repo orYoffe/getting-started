@@ -28,6 +28,7 @@ Selectors
 Pseudo selctors
     pseudo: hover, active
     First child nth child
+    
 Rules:
     Background color
     Margin, padding
