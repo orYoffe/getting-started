@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -13,19 +12,6 @@ export default function Header() {
 
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="Simple guides to get you started with technology right away. The
-            rest you can just search with google."
-        ></meta>
-        <meta name="theme-color" content="#000000" />
-        <meta property="og:image" content={icon} />
-        <link rel="apple-touch-icon" href={icon} />
-
-        <link rel="icon" href={icon} type="image/png" />
-      </Head>
-
       <style jsx>{`
         .img {
           display: inline-block;

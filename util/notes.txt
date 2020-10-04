@@ -22,20 +22,18 @@ Css
 
 Style and link tags and Style attribute
     Connecting tags from outside and inside
+Selectors
+    Tags, classes, ids,
+    Nested 
+Pseudo selctors
+    pseudo: hover, active
+    First child nth child
 Rules:
     Background color
     Margin, padding
     Position
     Display
     Flexbox
-
-Selectors
-    Tags, classes, ids,
-    Nested and important
-
-Pseudo selctors
-    pseudo: hover, active
-    Fist child nth child
 
 Media queries
     mobile, max and min

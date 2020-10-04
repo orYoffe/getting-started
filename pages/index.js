@@ -12,6 +12,7 @@ import MUILink from "@material-ui/core/Link";
 import { useStyles } from "../util/styles";
 import { items } from "../util/items";
 import Header from "../components/Header";
+import GitHub from "@material-ui/icons/GitHub";
 
 // function Copyright() {
 //   return (
@@ -29,6 +30,7 @@ import Header from "../components/Header";
 //   );
 // }
 
+const githubLink = "https://github.com/orYoffe/getting-started/issues";
 export default function Album() {
   const classes = useStyles();
 
@@ -58,23 +60,56 @@ export default function Album() {
               paragraph
             >
               Getting Started with software can be simple. Here you will find
-              simple straight forward guides to get started with different
-              programming tools from HTML, CSS, JavaScript and more...
+              simple, straight forward guides to learn the basics and get
+              started with different programming tools from HTML, CSS,
+              JavaScript and more...
+              <br />
+              The rest you can google.. 😉
             </Typography>
-            {/* <div className={classes.heroButtons}>
+            <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
+                <Grid item align="center">
+                  <Typography
+                    variant="p"
+                    align="center"
+                    color="textSecondary"
+                    paragraph
+                  >
+                    Have an idea to improve the site? Missing a guide?
+                  </Typography>
+                  <Link href={githubLink} target="_blank" as={githubLink}>
+                    <a style={{ textDecoration: "none" }}>
+                      <Button
+                        variant="contained"
+                        color="default"
+                        startIcon={<GitHub />}
+                      >
+                        {/* <MUILink
+                        color="inherit"
+                        target="_blank"
+                        href={githubLink}
+                        style={{
+                          backgroundColor: "#fff",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          width: "100%",
+                        }}
+                      > */}
+                        Contact us on Github
+                        {/* </MUILink> */}
+                      </Button>
+                    </a>
+                  </Link>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                   <Button variant="outlined" color="primary">
                     Secondary action
                   </Button>
-                </Grid>
+                </Grid> */}
               </Grid>
-            </div> */}
+            </div>
           </Container>
           <Container className={classes.cardGrid} maxWidth="md">
             <Grid container spacing={4}>

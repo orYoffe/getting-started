@@ -2,6 +2,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
+    const icon = `${process.env.BACKEND_URL}/icon.png`;
     return (
       <Html lang={this.props.lang || "en"}>
         <Head>
@@ -30,6 +31,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5JX7WB9');`,
             }}
           />
+          <meta
+            name="description"
+            content="Simple guides to get you started with technology right away. The
+            rest you can just search with google."
+          ></meta>
+          <meta name="theme-color" content="#000000" />
+          <meta property="og:image" content={icon} />
+          <link rel="apple-touch-icon" href={icon} />
+
+          <link rel="icon" href={icon} type="image/png" />
         </Head>
         <body>
           <noscript

@@ -151,7 +151,7 @@ export default function Item({ currentItem, nextItem }) {
             }}
           >
             <Link href="/" as={process.env.BACKEND_URL + "/"}>
-              <a>Back Home</a>
+              <a>Go Back Home</a>
             </Link>
             {nextItem && (
               <Link

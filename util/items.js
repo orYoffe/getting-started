@@ -75,6 +75,65 @@ export const items = [
     subTitle: "Styling language of the web",
     img: cssImage,
     prerequisits: ["html"],
+    next: "javascript",
+    parts: [
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/mystifying-moore-53kvq?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="mystifying-moore-53kvq"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Connecting HTML and CSS",
+        description:
+          'To insert CSS code in an HTML page we use the <style>, <link> tags or the "style" attribute.\nThe options are to write the CSS code outside the HTML page with <link rel="stylesheet" href="/any-name-you-want.css" /> or inside the page with <style>some css</style> or on the tag with "style" attribute <p style="css code">text</p>',
+        bottomText:
+          'You can create your own css files like this "index.css" or "any-name_you_want.css", connect it to an html page and open it in your browser.',
+      },
+      {
+        image: "/selector.gif",
+        embed: `<iframe src="https://codesandbox.io/embed/epic-sun-vugtv?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="epic-sun-vugtv"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Selectors",
+        description:
+          "In order to set design rules with CSS to an HTML element (tag).  We need to use a selector, to specify which element should the rules (declarations) apply to.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/lucid-brahmagupta-g21mu?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="lucid-brahmagupta-g21mu"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Pseudo selectors (special selectors)",
+        description:
+          "There are some special rules selectors to be more specific about which tags should be changed. depending on the tag state or place in the page.",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/lucid-brahmagupta-g21mu?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="lucid-brahmagupta-g21mu"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "CSS rules (declarations)",
+        description: "...",
+      },
+      {
+        embed: `<iframe src="https://codesandbox.io/embed/lucid-brahmagupta-g21mu?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="lucid-brahmagupta-g21mu"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+        title: "Media queries (mobile and different screen sizes)",
+        description: "...",
+      },
+    ],
   },
   {
     name: "JavaScript",
