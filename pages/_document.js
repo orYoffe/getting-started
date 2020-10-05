@@ -6,6 +6,47 @@ class MyDocument extends Document {
     return (
       <Html lang={this.props.lang || "en"}>
         <Head>
+          <meta name="keywords" content="html, css, javascript" />
+          <link rel="author" href="https://medium.com/@Or_yoffe" />
+          <meta name="author" content="Or Yoffe" />
+          <meta name="robots" content="index,follow,max-image-preview:large" />
+          <meta
+            property="article:author"
+            content="https://medium.com/@Or_yoffe"
+          />
+          <meta
+            name="title"
+            content="Getting started with HTML, CSS and JavaScript"
+          />
+          <link
+            rel="icon"
+            href="https://oryoffe.github.io/getting-started/icon.png"
+          />
+          <link
+            rel="canonical"
+            href="https://oryoffe.github.io/getting-started"
+          />
+
+          <meta
+            property="og:title"
+            content="Getting started with HTML, CSS and JavaScript"
+          />
+          <meta
+            property="twitter:title"
+            content="Getting started with HTML, CSS and JavaScript"
+          ></meta>
+          <meta
+            property="og:url"
+            content="https://oryoffe.github.io/getting-started"
+          />
+          <meta
+            property="al:web:url"
+            content="https://oryoffe.github.io/getting-started"
+          />
+          <meta
+            property="og:image"
+            content="https://oryoffe.github.io/getting-started/icon.png"
+          ></meta>
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-179549639-1"
