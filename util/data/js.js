@@ -98,17 +98,17 @@ const js = {
       bottomText:
         "You can simply open this URL https://jsonplaceholder.typicode.com/users in the browser and see the data that is being returned.",
     },
-    //     {
-    //       embed: `<iframe src="https://codesandbox.io/embed/admiring-river-k0nsk?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-    //    style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-    //    title="admiring-river-k0nsk"
-    //    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-    //    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-    //  ></iframe>`,
-    //       title: "Libraries (Google maps, jQuery) and using other people's code",
-    //       description:
-    //         "Many times you would find other people wrote a library (code) that you could use to build your website. A bit of searching ",
-    //     },
+    {
+      embed: `<iframe src="https://codesandbox.io/embed/relaxed-waterfall-fcdj4?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="relaxed-waterfall-fcdj4"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>`,
+      title: "Libraries (other people's code)",
+      description:
+        "Many times you would find other people wrote a library (code) that you could use to build your website. A bit of searching online with the text 'html', 'css' or 'javascript' you could find a lot of useful libraries, tools, widgets and many documentation of how to implement other people's code to help you out. The community is great and everyone uses other people's code inside of their own websites to develop stuff faster and easier. It is common to find many articles explaining how to do things with different libraries, even though they are not connected to the official library documentation. One example is having a map on your site with the leafletjs library. If you're interested in further learning about this particular library, go to https://leafletjs.com/examples/quick-start/",
+    },
   ],
 };
 
