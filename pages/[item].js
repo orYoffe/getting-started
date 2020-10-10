@@ -143,7 +143,11 @@ export default function Item({ currentItem, nextItem }) {
                           {i.description}
                         </Typography>
                         {i.image && (
-                          <img alt={i.title} src={i.image} className="img" />
+                          <img
+                            alt={i.title}
+                            src={`${process.env.BACKEND_URL}/${i.image}`}
+                            className="img"
+                          />
                         )}
                         {expanded === index && i.embed && (
                           <div

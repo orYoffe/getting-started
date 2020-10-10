@@ -21,7 +21,7 @@ const css = {
         'You can create your own css files like this "index.css" or "any-name_you_want.css", connect it to an html page and open it in your browser.',
     },
     {
-      image: "/selector.gif",
+      image: "selector.gif",
       embed: `<iframe src="https://codesandbox.io/embed/epic-sun-vugtv?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
      title="epic-sun-vugtv"

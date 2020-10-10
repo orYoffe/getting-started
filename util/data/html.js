@@ -9,7 +9,7 @@ const html = {
   next: "Css",
   parts: [
     {
-      image: "/anatomy-of-an-html-element.png",
+      image: "anatomy-of-an-html-element.png",
       title: "HTML tag structure",
       description:
         "An html tag is made out of it's openning tag, closing tag, it's content in the middle and it's attributes and values on it's opening tag.\n There are tags the don't have closing tags like the <br/> and <img/> tags.",
