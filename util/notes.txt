@@ -59,7 +59,8 @@ loops
     array functions
 Manipulating html
 Events
-Async promise
+requests Async promise
+
 
 
 Nodejs

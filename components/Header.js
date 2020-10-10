@@ -39,7 +39,7 @@ export default function Header() {
           }}
         >
           <Typography
-            variant="p"
+            // variant="p"
             color="inherit"
             // noWrap
             style={{
@@ -56,7 +56,7 @@ export default function Header() {
             </Link>
           </Typography>
           <Typography
-            variant="p"
+            // variant="p"
             color="inherit"
             // noWrap
             style={{

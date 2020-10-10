@@ -6,14 +6,22 @@ import Header from "../components/Header";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import MUILink from "@material-ui/core/Link";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default function Item({ currentItem, nextItem }) {
   const classes = useStyles();
+  const [expanded, setExpanded] = React.useState(0);
+
   if (!currentItem) {
     return null;
-    return <div>404 Item not found</div>;
   }
 
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
   const needToKnow =
     currentItem.prerequisits &&
     !!currentItem.prerequisits.length &&
@@ -29,7 +37,7 @@ export default function Item({ currentItem, nextItem }) {
       </Head>
       <Header />
 
-      <main>
+      <main style={{ marginTop: 20 }}>
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography
@@ -65,7 +73,7 @@ export default function Item({ currentItem, nextItem }) {
             </Typography>
             <Typography
               style={{ maxWidth: 300, margin: "0 auto" }}
-              variant="p"
+              // variant="p"
               align="center"
               color="textSecondary"
               paragraph
@@ -97,57 +105,75 @@ export default function Item({ currentItem, nextItem }) {
             )}
           </Container>
           <Container maxWidth="lg">
-            {currentItem.parts &&
-              currentItem.parts.map((i) => (
-                <div key={i.title}>
-                  <Typography
-                    component="h5"
-                    variant="h5"
-                    align="left"
-                    color="textPrimary"
-                    gutterBottom
+            {currentItem.parts && (
+              <div className={classes.root}>
+                {currentItem.parts.map((i, index) => (
+                  <Accordion
+                    key={i.title}
+                    expanded={expanded === index}
+                    onChange={handleChange(index)}
                   >
-                    {i.title}
-                  </Typography>
-                  <Typography
-                    style={{ maxWidth: 300 }}
-                    variant="p"
-                    align="left"
-                    color="textSecondary"
-                    paragraph
-                  >
-                    {i.description}
-                  </Typography>
-                  {i.image && (
-                    <img alt={i.title} src={i.image} className="img" />
-                  )}
-                  {i.embed && (
-                    <div
-                      style={{ width: "100%" }}
-                      dangerouslySetInnerHTML={{ __html: i.embed }}
-                    />
-                  )}
-                  <Typography
-                    style={{ maxWidth: 300 }}
-                    variant="p"
-                    align="left"
-                    color="textSecondary"
-                    paragraph
-                  >
-                    {i.bottomText}
-                  </Typography>
-                  <br />
-                  <br />
-                  <br />
-                </div>
-              ))}
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls={`${i.title}bh-content`}
+                      id={`${i.title}bh-header`}
+                    >
+                      <Typography className={classes.heading}>
+                        {i.title}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <div style={{ width: "100%" }}>
+                        {/* <Typography
+                          component="h5"
+                          variant="h5"
+                          align="left"
+                          color="textPrimary"
+                          gutterBottom
+                        >
+                          {i.title}
+                        </Typography> */}
+                        <Typography
+                          style={{ maxWidth: 300 }}
+                          // variant="p"
+                          align="left"
+                          color="textSecondary"
+                          paragraph
+                        >
+                          {i.description}
+                        </Typography>
+                        {i.image && (
+                          <img alt={i.title} src={i.image} className="img" />
+                        )}
+                        {expanded === index && i.embed && (
+                          <div
+                            style={{ width: "100%" }}
+                            dangerouslySetInnerHTML={{ __html: i.embed }}
+                          />
+                        )}
+                        <Typography
+                          style={{ maxWidth: 300 }}
+                          // variant="p"
+                          align="left"
+                          color="textSecondary"
+                          paragraph
+                        >
+                          {i.bottomText}
+                        </Typography>
+                      </div>
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+              </div>
+            )}
           </Container>
           <Container
             maxWidth="md"
             style={{
               justifyContent: "space-between",
               display: "flex",
-              marginBottom: 20,
+              marginTop: 20,
+              marginBottom: 40,
             }}
           >
             <Link href="/" as={process.env.BACKEND_URL + "/"}>

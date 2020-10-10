@@ -70,7 +70,7 @@ export default function Album() {
               <Grid container spacing={2} justify="center">
                 <Grid item align="center">
                   <Typography
-                    variant="p"
+                    // variant="p"
                     align="center"
                     color="textSecondary"
                     paragraph
