@@ -66,14 +66,13 @@ libraries
 
 Nodejs
 
+js file node index.js file
+require(module or file) 
+    Fs
+package.json
 NPM
-    package.json
 Simple web server with port (express)
-Routes
- Fs
-Async
-Env vars and security
-Cors
+    Routes
 
 
 React

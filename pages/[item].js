@@ -200,16 +200,18 @@ export default function Item({ currentItem, nextItem }) {
 
 export const getStaticProps = async ({ params }) => {
   const { item } = params;
-  const currentItem =
+  let currentItem =
     !!item &&
     items.find((i) => i.name && i.name.toLowerCase() === item.toLowerCase());
 
-  const nextItem =
+  let nextItem =
     !!currentItem &&
     !!currentItem.next &&
     items.find(
       (i) => i.name && i.name.toLowerCase() === currentItem.next.toLowerCase()
     );
+  currentItem = currentItem || null;
+  nextItem = nextItem || null;
   return {
     props: {
       currentItem,

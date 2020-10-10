@@ -5,6 +5,7 @@ const js = {
   subTitle: "The Programming language of the web",
   description:
     "JavaScript is mainly run in the browser, but can run on servers and any other place today.",
+  next: "node.js",
   img: jsImage,
   prerequisits: ["html", "css"],
   parts: [
