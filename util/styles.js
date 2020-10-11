@@ -22,6 +22,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   heroButtons: {
     marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
