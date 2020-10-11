@@ -9,7 +9,7 @@ const css = {
   parts: [
     {
       embed: `<iframe src="https://codesandbox.io/embed/mystifying-moore-53kvq?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="mystifying-moore-53kvq"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -23,7 +23,7 @@ const css = {
     {
       image: "selector.gif",
       embed: `<iframe src="https://codesandbox.io/embed/epic-sun-vugtv?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="epic-sun-vugtv"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -34,7 +34,7 @@ const css = {
     },
     {
       embed: `<iframe src="https://codesandbox.io/embed/lucid-brahmagupta-g21mu?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="lucid-brahmagupta-g21mu"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -45,7 +45,7 @@ const css = {
     },
     {
       embed: `<iframe src="https://codesandbox.io/embed/sleepy-hoover-o8vc4?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="sleepy-hoover-o8vc4"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -56,7 +56,7 @@ const css = {
     },
     {
       embed: `<iframe src="https://codesandbox.io/embed/crazy-mahavira-lhcog?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="crazy-mahavira-lhcog"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -67,7 +67,7 @@ const css = {
     },
     {
       embed: `<iframe src="https://codesandbox.io/embed/fragrant-bush-0qic9?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="fragrant-bush-0qic9"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -78,7 +78,7 @@ const css = {
     },
     {
       embed: `<iframe src="https://codesandbox.io/embed/dazzling-bogdan-6wr0m?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="dazzling-bogdan-6wr0m"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -89,7 +89,7 @@ const css = {
     },
     {
       embed: `<iframe src="https://codesandbox.io/embed/objective-faraday-xp46g?autoresize=1&fontsize=16&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:1000px; border:0; border-radius: 4px; overflow:hidden;"
      title="objective-faraday-xp46g"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
