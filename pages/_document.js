@@ -22,11 +22,6 @@ class MyDocument extends Document {
             rel="icon"
             href="https://oryoffe.github.io/getting-started/icon.png"
           />
-          <link
-            rel="canonical"
-            href="https://oryoffe.github.io/getting-started"
-          />
-
           <meta
             property="og:title"
             content="Getting started with HTML, CSS and JavaScript"
