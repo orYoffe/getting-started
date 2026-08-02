@@ -4,7 +4,7 @@ const css = {
   name: "CSS",
   subTitle: "Styling language of the web",
   img: cssImage,
-  prerequisits: ["html"],
+  prerequisites: ["html"],
   next: "javascript",
   parts: [
     {

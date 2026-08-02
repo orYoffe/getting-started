@@ -1,37 +1,64 @@
 import Link from "next/link";
 import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import MUILink from "@material-ui/core/Link";
+import IconButton from "@material-ui/core/IconButton";
 import GitHub from "@material-ui/icons/GitHub";
+import Brightness4 from "@material-ui/icons/Brightness4";
+import Brightness7 from "@material-ui/icons/Brightness7";
+import { useColorMode } from "../util/theme";
 
 const githubLink = "https://github.com/orYoffe/getting-started/issues";
 export default function Header() {
-  const icon = `${process.env.BACKEND_URL}/icon.png`;
+  const icon = `${process.env.BACKEND_URL}/brand-mark.svg`;
+  const { mode, toggleColorMode } = useColorMode();
 
   return (
     <>
       <style jsx>{`
         .img {
           display: inline-block;
-          width: 50px;
-          margin-right: 10px;
+          width: 36px;
+          height: 36px;
+          margin-right: 8px;
+          vertical-align: middle;
+        }
+        .toolbar {
+          gap: 12px;
+          min-height: 64px;
+          padding: 0 24px;
+        }
+        .actions {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        .githubLink {
+          align-items: center;
+          display: flex;
+          gap: 6px;
+        }
+        @media (max-width: 600px) {
+          .toolbar { min-height: 56px; padding: 0 12px; }
+          .img { width: 32px; height: 32px; margin-right: 6px; }
+          .githubLabel { display: none; }
+          .actions { gap: 4px; }
         }
       `}</style>
-      <CssBaseline />
       <AppBar
-        position="relative"
+        position="sticky"
+        color="inherit"
+        elevation={1}
         style={{
-          backgroundColor: "#fff",
+          backgroundColor: "transparent",
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
         }}
       >
         <Toolbar
+          className="toolbar"
           style={{
-            backgroundColor: "#fff",
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
@@ -43,46 +70,36 @@ export default function Header() {
             color="inherit"
             // noWrap
             style={{
-              color: "#222",
               display: "inline-block",
               textAlign: "center",
             }}
           >
-            <Link href="/" as={process.env.BACKEND_URL + "/"}>
-              <MUILink color="inherit" href={process.env.BACKEND_URL + "/"}>
-                <img alt="Getting started icon" src={icon} className="img" />
-                Getting Started
-              </MUILink>
+            <Link href="/" style={{ color: "inherit", textDecoration: "none" }}>
+              <img alt="Getting Started home" src={icon} className="img" />
+              Getting Started
             </Link>
           </Typography>
-          <Typography
-            // variant="p"
-            color="inherit"
-            // noWrap
-            style={{
-              color: "#222",
-              display: "inline-block",
-              textAlign: "center",
-            }}
-          >
-            <Link href={githubLink} target="_blank" as={githubLink}>
-              <MUILink
-                color="inherit"
-                target="_blank"
-                href={githubLink}
-                style={{
-                  backgroundColor: "#fff",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "100%",
-                }}
-              >
-                <GitHub /> Contact us on Github
-              </MUILink>
-            </Link>
-          </Typography>
+          <div className="actions">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={githubLink}
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+              }}
+              className="githubLink"
+            >
+              <GitHub /> <span className="githubLabel">Contact us on GitHub</span>
+            </a>
+            <IconButton
+              color="inherit"
+              aria-label={`Switch to ${mode === "light" ? "dark" : "light"} mode`}
+              onClick={toggleColorMode}
+            >
+              {mode === "light" ? <Brightness4 /> : <Brightness7 />}
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
     </>

@@ -6,7 +6,7 @@ const nodejs = {
   description:
     "Node.js is the way to run JavaScript on your machine outside of the browser. Whether you want to build a server or just a script that reads and writes files, Node.js is useful in many ways to extend your capabilities with JavaScript outside of the browser. Make sure to install Node.js to your machine before starting this guide. You can find the download link here: https://nodejs.org/en/download/",
   img: nodejsImage,
-  prerequisits: ["javascript"],
+  prerequisites: ["javascript"],
   parts: [
     {
       embed: `<iframe height="1000px" width="100%" src="https://repl.it/@OrYoffe/ConcreteDecisiveMedia?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>`,
