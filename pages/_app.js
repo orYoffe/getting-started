@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
       createMuiTheme({
         palette: {
           type: mode,
-          primary: { main: "#4f46e5" },
+          primary: { main: mode === "dark" ? "#a5b4fc" : "#4338ca" },
           secondary: { main: "#0891b2" },
           background:
             mode === "dark"
@@ -46,6 +46,20 @@ export default function App({ Component, pageProps }) {
           fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
           h1: { fontWeight: 800 },
           h2: { fontWeight: 800 },
+        },
+        overrides: {
+          MuiCssBaseline: {
+            "@global": {
+              a: {
+                color: mode === "dark" ? "#a5b4fc" : "#4338ca",
+                textDecorationThickness: "2px",
+                textUnderlineOffset: "3px",
+              },
+              "a:hover": {
+                color: mode === "dark" ? "#c7d2fe" : "#312e81",
+              },
+            },
+          },
         },
       }),
     [mode]
