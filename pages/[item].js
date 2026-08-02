@@ -15,6 +15,7 @@ import { absoluteUrl, jsonLd, plainText, siteName, siteUrl } from "../util/seo";
 export default function Item({ currentItem, nextItem }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(0);
+  const [activeChapter, setActiveChapter] = React.useState(null);
 
   if (!currentItem) {
     return null;
@@ -28,6 +29,13 @@ export default function Item({ currentItem, nextItem }) {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+  const chapters = Array.from(
+    new Set((currentItem.parts || []).map((part) => part.chapter || "Lessons"))
+  );
+  const selectedChapter = activeChapter || chapters[0];
+  const visibleParts = (currentItem.parts || []).filter(
+    (part) => (part.chapter || "Lessons") === selectedChapter
+  );
   const needToKnow =
     currentItem.prerequisites &&
     !!currentItem.prerequisites.length &&
@@ -138,7 +146,14 @@ export default function Item({ currentItem, nextItem }) {
           <Container maxWidth="lg">
             {currentItem.parts && (
               <div className={classes.root}>
-                {currentItem.parts.map((i, index) => (
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }} aria-label="Lesson chapters">
+                  {chapters.map((chapter) => (
+                    <button key={chapter} type="button" onClick={() => { setActiveChapter(chapter); setExpanded(false); }} style={{ border: 0, borderRadius: 999, padding: "8px 12px", cursor: "pointer", fontWeight: 700, background: selectedChapter === chapter ? "#4f46e5" : "rgba(79, 70, 229, 0.12)", color: selectedChapter === chapter ? "#fff" : "inherit" }}>
+                      {chapter}
+                    </button>
+                  ))}
+                </div>
+                {visibleParts.map((i, index) => (
                   <Accordion
                     key={i.title}
                     expanded={expanded === index}
@@ -173,6 +188,21 @@ export default function Item({ currentItem, nextItem }) {
                         >
                           {i.description}
                         </Typography>
+                        {i.code && (
+                          <pre
+                            style={{
+                              overflowX: "auto",
+                              padding: 16,
+                              borderRadius: 8,
+                              background: "#111827",
+                              color: "#f8fafc",
+                              lineHeight: 1.6,
+                              whiteSpace: "pre",
+                            }}
+                          >
+                            <code>{i.code}</code>
+                          </pre>
+                        )}
                         {i.image && (
                           <img
                             alt={i.title}
