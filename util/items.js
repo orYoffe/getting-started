@@ -12,6 +12,6 @@ const futureItems = [
     name: "React",
     subTitle: "JavaScript UI Library",
     img: reactImage,
-    prerequisits: ["html", "css", "javascript"],
+    prerequisites: ["html", "css", "javascript"],
   },
 ];

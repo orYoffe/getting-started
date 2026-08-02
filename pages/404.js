@@ -67,9 +67,7 @@ export default function NotFound() {
               </Grid>
             </div> */}
             Go back{" "}
-            <Link href="/" as={process.env.BACKEND_URL + "/"}>
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </Container>
         </div>
       </main>

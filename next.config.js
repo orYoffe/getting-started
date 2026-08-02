@@ -2,8 +2,13 @@
 // So, we write it in vanilla JS
 // (But you could use ES2015 features supported by your Node.js version)
 
-const debug = process.env.NODE_ENV !== "production";
+const isProduction = process.env.NODE_ENV === "production";
+const basePath = isProduction ? "/getting-started" : "";
 
 module.exports = {
-  assetPrefix: !debug ? "/getting-started/" : "",
+  output: "export",
+  basePath,
+  assetPrefix: basePath,
+  trailingSlash: true,
+  images: { unoptimized: true },
 };

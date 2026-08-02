@@ -6,11 +6,11 @@ import { items } from "../util/items";
 import Header from "../components/Header";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import MUILink from "@material-ui/core/Link";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { absoluteUrl, jsonLd, plainText, siteName, siteUrl } from "../util/seo";
 
 export default function Item({ currentItem, nextItem }) {
   const classes = useStyles();
@@ -19,22 +19,53 @@ export default function Item({ currentItem, nextItem }) {
   if (!currentItem) {
     return null;
   }
+  const pageTitle = `Learn ${currentItem.name} | ${siteName}`;
+  const pageDescription = plainText(
+    currentItem.description || currentItem.subTitle
+  );
+  const pagePath = `/${encodeURIComponent(currentItem.name)}`;
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
   const needToKnow =
-    currentItem.prerequisits &&
-    !!currentItem.prerequisits.length &&
+    currentItem.prerequisites &&
+    !!currentItem.prerequisites.length &&
     items.filter(
       (i) =>
         !!i.name &&
-        currentItem.prerequisits.indexOf(i.name.toLowerCase()) !== -1
+        currentItem.prerequisites.indexOf(i.name.toLowerCase()) !== -1
     );
   return (
     <>
       <Head>
-        <title> Getting started with {currentItem.name} </title>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={absoluteUrl(pagePath)} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={absoluteUrl(pagePath)} />
+        <meta property="og:image" content={absoluteUrl("/icon.png")} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={absoluteUrl("/icon.png")} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLd({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            name: `Getting started with ${currentItem.name}`,
+            description: pageDescription,
+            provider: {
+              "@type": "Organization",
+              name: siteName,
+              url: `${siteUrl}/`,
+            },
+            url: absoluteUrl(pagePath),
+          })}
+        />
       </Head>
       <Header />
 
@@ -47,6 +78,7 @@ export default function Item({ currentItem, nextItem }) {
               align="center"
               color="textPrimary"
               gutterBottom
+              className={classes.guideTitle}
             >
               <img
                 alt={currentItem.name}
@@ -82,8 +114,8 @@ export default function Item({ currentItem, nextItem }) {
               {currentItem.description}
             </Typography>
           </Container>
-          <Container maxWidth="lg" style={{ marginBottom: 20 }}>
-            {needToKnow && !!needToKnow.length && (
+          {needToKnow && !!needToKnow.length && (
+            <Container maxWidth="lg" style={{ marginBottom: 20 }}>
               <Typography
                 component="h5"
                 align="left"
@@ -92,19 +124,17 @@ export default function Item({ currentItem, nextItem }) {
               >
                 Need to know (before learning {currentItem.name}):{" "}
                 {needToKnow.map((i, index) => {
-                  const link = `${process.env.BACKEND_URL}/${i.name}`;
+                  const link = `/${i.name}`;
                   return (
-                    <Link href={link} as={link} key={link}>
-                      <MUILink href={link}>
-                        {index === 0 ? " " : ", "}
-                        {i.name}
-                      </MUILink>
+                    <Link href={link} key={link}>
+                      {index === 0 ? " " : ", "}
+                      {i.name}
                     </Link>
                   );
                 })}
               </Typography>
-            )}
-          </Container>
+            </Container>
+          )}
           <Container maxWidth="lg">
             {currentItem.parts && (
               <div className={classes.root}>
@@ -181,16 +211,9 @@ export default function Item({ currentItem, nextItem }) {
               marginBottom: 40,
             }}
           >
-            <Link href="/" as={process.env.BACKEND_URL + "/"}>
-              <a>Back to guides page</a>
-            </Link>
+            <Link href="/">Back to guides page</Link>
             {nextItem && (
-              <Link
-                href={process.env.BACKEND_URL + "/" + nextItem.name}
-                as={process.env.BACKEND_URL + "/" + nextItem.name}
-              >
-                <a>Continue to learn {nextItem.name}</a>
-              </Link>
+              <Link href={`/${nextItem.name}`}>Continue to learn {nextItem.name}</Link>
             )}
           </Container>
         </div>

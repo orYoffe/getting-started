@@ -7,7 +7,7 @@ const js = {
     "JavaScript is mainly run in the browser, but can run on servers and any other place today.",
   next: "node.js",
   img: jsImage,
-  prerequisits: ["html", "css"],
+  prerequisites: ["html", "css"],
   parts: [
     {
       embed: `<iframe src="https://codesandbox.io/embed/purple-http-3cvem?autoresize=1&expanddevtools=1&fontsize=16&hidenavigation=1&theme=dark"
